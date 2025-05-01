@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LEMO site </title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Tajawal', sans-serif;
+        }
+        
+        .main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    background-color: #a8e6cf;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    width: 120px;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.logo:hover {
+    transform: scale(1.05);
+}
+
+.store-btn {
+    background-color: #29b100;
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    transition: all 0.3s;
+    position: relative;
+    overflow: hidden;
+    
+}
+
+.store-btn span {
+    position: relative;
+    z-index: 2;
+}
+
+.hover-effect {
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+    transition: 0.5s;
+}
+
+.store-btn:hover .hover-effect {
+    left: 100%;
+}
+
+.store-btn:hover {
+    background-color: #c0392b;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.section-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.section-header h2 {
+    font-size: 2rem;
+    color: #2c3e50;
+    position: relative;
+    display: inline-block;
+}
+        
+       
+        
+        .video-section {
+            padding: 3rem 0;
+            background-color: #f8f9fa; /* خلفية فاتحة */
+            position: relative;
+        }
+        
+        .video-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            position: relative;
+            padding: 0 2rem;
+        }
+        
+        .tech-heading {
+            position: relative;
+            z-index: 2;
+            color: #2c3e50; /* نفس لون الهيدر */
+            text-align: center;
+            margin-bottom: 2rem;
+            font-size: 3rem;
+            font-weight: 800;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            animation: fadeInDown 1s ease-out;
+        }
+        
+        .tech-heading::after {
+            content: "";
+            display: block;
+            width: 100px;
+            height: 4px;
+            background-color: #e74c3c; /* لون الزر */
+            margin: 1rem auto;
+            border-radius: 2px;
+        }
+        
+        .video-wrapper {
+            position: relative;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+            max-width: 1000px;
+            margin: 0 auto;
+            border: 1px solid #ddd;
+        }
+        
+        .vid {
+            width: 100%;
+            display: block;
+            position: relative;
+            z-index: 1;
+            border-radius: 12px;
+        }
+        
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .tech-heading {
+                font-size: 2rem;
+            }
+            
+            .main-header {
+                flex-direction: column;
+                padding: 1rem;
+            }
+            
+            .store-btn {
+                margin-top: 1rem;
+            }
+        }
+        .main-footer {
+    background: var(--dark-color);
+    color: var(--white);
+    padding: 60px 0 0;
+}
+
+
+
+
+a {
+    text-decoration:none;
+    text-decoration-color: #2e7d32; 
+    text-decoration-thickness: 2px;
+    text-decoration-style: dotted; 
+    color: black;
+}
+
+a:hover {
+color: lightgreen; 
+}
+
+
+  
+.main-footer {
+    transform: translateX(-60rem);
+}
+body{
+   overflow: hidden;
+
+}
+.moving-image {
+position: absolute;
+animation: moveRightLeft 10s linear infinite;
+}
+
+@keyframes moveRightLeft {
+0% { left: 0px; }
+50% { left: 1600px; }
+100% { left: 0px; }
+}
+
+
+.tech-heading {
+  animation: green-colors 1s infinite ease-in-out;
+}
+
+@keyframes green-colors {
+  0% { color: #09ea0d; }  /* أخضر فاتح جداً */
+  20% { color: #4da515; } /* أخضر نعناعي */
+  40% { color: #00ae40; } /* أخضر متوسط */
+  60% { color: #13a500; } /* أخضر مزرق */
+  80% { color: #008900; } /* أخضر غامق */
+  100% { color: #09ea0d; }
+}
+.store-btn {
+    transform: translateX(1.5rem);
+    
+}
+.store-btn:hover {
+    transform: translateX(1.5rem)translateY(-0.5rem);
+
+}
+
+.c {
+    font-size: larger;
+    transform: translateY(-3rem)translateX(1rem);
+}
+
+
+.moving-image {
+    width: 250px;
+    transform: translateX(10rem);
+}
+.weather-widget {
+            background: linear-gradient(135deg, #72b5e0, #52b72d);
+            padding: 15px 20px;
+            color: white;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            font-family: 'Tajawal', sans-serif;
+        }
+        
+        .weather-info {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .weather-icon {
+            font-size: 2rem;
+        }
+        
+        .weather-temp {
+            font-size: 1.8rem;
+            font-weight: bold;
+        }
+        
+        .weather-details {
+            display: flex;
+            gap: 20px;
+        }
+        
+        .weather-detail {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .weather-detail i {
+            margin-bottom: 5px;
+        }
+        
+        
+
+
+            </style>
+      </head>
+       <body>
+    <header class="main-header">
+        
+        <a href="index.html"><img class="logo" src="assets/Screenshot 2025-05-01 122047.png" alt="شعار المتجر"></a>
+        <a href="index.html" class="store-btn">
+            <span class="hi">استكشف المنتجات</span>
+            <div class="hover-effect"></div>
+             
+        </a>  
+           <img class="moving-image" src="assets/Untitled.png" alt="Moving Image">
+           
+    
+    </header>
+
+     <section>
+        <div class="weather-widget">
+            <div class="weather-info">
+                <i class="weather-icon fas fa-sun"></i>
+                <div>
+                    <div class="weather-city">مادبا</div>
+                    <div class="weather-temp">25°C</div>
+                </div>
+            </div>
+            <div class="weather-details">
+                <div class="weather-detail">
+                    <i class="fas fa-wind"></i>
+                    <span>10km/h</span>
+                </div>
+                <div class="weather-detail">
+                    <i class="fas fa-tint"></i>
+                    <span>40%</span>
+                </div>
+                <div class="weather-detail">
+                    <i class="fas fa-cloud"></i>
+                    <span>صافي</span>
+                </div>
+            </div>
+        </div>
+     </section>
+
+    <section class="video-section">
+        <div class="video-container">
+            <h1 class="tech-heading">  أحدث التقنيات لزراعة مستدامة بلمسة واحدة </h1>
+            <div class="video-wrapper">
+                <video class="vid" src="assets/WhatsApp Video 2025-04-29 at 1.29.45 PM.mp4" autoplay loop muted controls></video>
+            </div>
+        </div>
+    </section>
+    <footer class="main-footer">
+        <p class="c">©جميع الحقوق  محفوظه LEMO Team</p>
+    </footer>
+</body>
+</html>
